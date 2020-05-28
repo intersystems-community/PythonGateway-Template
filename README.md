@@ -1,6 +1,6 @@
 ## intersystems-objectscript-template
-This is a template for InterSystems ObjectScript Github repository.
-The template goes also with a few files which let you immedietly compile your ObjecScript files in InterSystems IRIS Community Edition in a docker container
+This is a template for PythonGateway - InterSystems ObjectScript Github repository.
+The template goes also with a few files which let you immedietly compile your InterSystems ObjectScript files in InterSystems IRIS Community Edition in a docker container.
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
@@ -10,7 +10,7 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/objectscript-docker-template.git
+$ git clone https://github.com/intersystems-community/PythonGateway-Template.git
 ```
 
 Open the terminal in this directory and run:
@@ -31,8 +31,7 @@ Open IRIS terminal:
 
 ```
 $ docker-compose exec iris iris session iris
-USER>zn "IRISAPP"
-IRISAPP>write ##class(PackageSample.ObjectScript).Test()
+PYTHON>write ##class(PackageSample.ObjectScript).Test()
 ```
 ## How to start coding
 This repository is ready to code in VSCode with ObjectScript plugin.
@@ -49,21 +48,38 @@ The script in Installer.cls will import everything you place under /src into IRI
 
 ## What's inside the repository
 
+## Content
+
+### PythonGateway
+
+
+Python Gateway for InterSystems Data Platforms. Execute Python code and more from InterSystems IRIS. This projects brings you the power of Python right into your InterSystems IRIS environment:
+- Execute arbitrary Python code
+- Seamlessly transfer data from InterSystems IRIS into Python
+- Build intelligent Interoperability business processes with Python Interoperability Adapter
+- Save, examine, modify and restore Python context from InterSystems IRIS
+
+[Readme](https://github.com/intersystems-community/PythonGateway). [Articles](https://community.intersystems.com/post/python-gateway-part-i-introduction).
+
+
+### PythonGatewaySamples / MLToolkit Experience Lab
+
+Examples of PythonGateway usage. [Readme](https://github.com/intersystems-community/PythonGatewaySamples/). 
+If you're just starting follow the tutorial at:
+
+```
+http://localhost:52773/csp/user/index.html
+```
+
+Where `52773` is a container web port. 
+
+## DevOps
+
 ### Dockerfile
 
 The simplest dockerfile which starts IRIS and imports Installer.cls and then runs the Installer.setup method, which creates IRISAPP Namespace and imports ObjectScript code from /src folder into it.
 Use the related docker-compose.yml to easily setup additional parametes like port number and where you map keys and host folders.
 Use .env/ file to adjust the dockerfile being used in docker-compose.
-
-### Dockerfile-zpm
-
-Dockerfile-zpm builds for you a container which contains ZPM package manager client so you are able to install packages from ZPM in this container.
-As an example of usage in installs webterminal
-
-### Dockerfile-web
-
-Dockerfile-web starts IRIS does the same what Dockerfile does and also sets up the web app programmatically
-
 
 ### .vscode/settings.json
 
