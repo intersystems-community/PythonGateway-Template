@@ -1,7 +1,8 @@
-version: '3.6'
+version: "2.2"
 services:
   iris:
-    build: 
+    init: true
+    build:
       context: .
       dockerfile: Dockerfile
     restart: always
@@ -9,4 +10,4 @@ services:
       - 51773:51773
       - 52773:52773
     volumes:
-      - .\:/irisdev/app
+      - ./:/irisdev/app
