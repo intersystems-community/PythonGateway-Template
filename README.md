@@ -46,6 +46,8 @@ Feel free to delete PackageSample folder and place your ObjectScript classes in 
 
 The script in Installer.cls will import everything you place under /src into IRIS.
 
+Use [csvgen](https://community.intersystems.com/post/import-csv-programmatically-file-or-url-using-csvgen) to load the data from CSV.
+
 
 ## What's inside the repository
 
