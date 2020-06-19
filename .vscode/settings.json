@@ -1,7 +1,5 @@
 {
-    "files.associations": {
-        "Dockerfile*": "dockerfile"
-      },
+    
     "objectscript": {
       "conn": {
         "https": false,
@@ -12,9 +10,11 @@
         "docker-compose": {
           "service": "iris",
           "internalPort": 52773
+        }, 
+        "links": {
+          "MLToolkit Demos": "http://localhost:${port}/csp/user/index.html"
         }
       }
-    },
-    "objectscript.conn.active": true
+    }
 
 }
