@@ -1,7 +1,7 @@
 ## intersystems-objectscript-template
 This is a template for PythonGateway - InterSystems ObjectScript Github repository.
 
-The template goes also with a few files which let you immedietly compile your InterSystems ObjectScript files in InterSystems IRIS Community Edition (Advanced Analytics including IntegratedML) in a docker container.
+The template goes also with a few files which let you immediately compile your InterSystems ObjectScript files in InterSystems IRIS Community Edition (Advanced Analytics including IntegratedML) in a docker container.
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
